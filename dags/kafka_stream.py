@@ -60,7 +60,7 @@ def stream_data():
 
             producer.send('users_created', json.dumps(res).encode('utf-8'))
         except Exception as e:
-            logging.error(f'An error occured: {e}')
+            logging.error(f'An error occured, cannot stream data because of: {e}')
             continue
 
 
